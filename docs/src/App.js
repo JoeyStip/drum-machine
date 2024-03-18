@@ -13,9 +13,14 @@ function Display({displayText}){
 
 function Pad({sample, onClick, padLabel}) {
   
+  function playSample(){
+    alert()
+  }
+
   return (
     <button className="drum-pad" id={sample} value={sample} onClick={onClick}>
       {padLabel} {sample}
+      <audio src={PawnStars} id={sample + "audio"} onClick={playSample}></audio>
     </button>
   )
 }
@@ -27,6 +32,8 @@ function App() {
 
   function handleClick(e){
     setDisplayText(e.target.value)
+    const x = document.getElementById(e.target.id + "audio")
+    x.play();
   }
    
   return (
