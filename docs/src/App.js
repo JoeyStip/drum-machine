@@ -14,8 +14,8 @@ function Display({displayText}){
 function Pad({sample, onClick, padLabel}) {
   
   return (
-    <button className="drum-pad" id={sample} onClick={onClick}>
-      {padLabel}
+    <button className="drum-pad" id={sample} value={sample} onClick={onClick}>
+      {padLabel} {sample}
     </button>
   )
 }
@@ -25,18 +25,15 @@ function App() {
   const [sample, setSample] = useState('') 
   const [displayText, setDisplayText] = useState('')
 
-  function handleClick(){
-    setDisplayText({sample})
+  function handleClick(e){
+    setDisplayText(e.target.value)
   }
-  
+   
   return (
     <div id="drum-machine">
       <div id="interface">
         <div id="buttonContainer">
-          <button className="drum-pad" id="heater1">
-            Q
-            <audio src={PawnStars}></audio>
-          </button>
+          <Pad sample="heater1" onClick={handleClick} padLabel="Q" />
           <Pad sample="heater2" onClick={handleClick} padLabel="W" />
           <Pad sample="header3" onClick={handleClick} padLabel="E" />
           <Pad sample="heater4" onClick={handleClick} padLabel="A" />
