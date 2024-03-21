@@ -55,7 +55,9 @@ code {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
 }
 #controls #display {
   width: 50%;
@@ -68,4 +70,26 @@ code {
   /*position: relative;
   top: 50%;
   left: 30%*/
+}
+#controls #volumeContainer {
+  display: flex;
+  flex-direction: column;
+}
+#controls #volumeContainer #slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */ /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+#controls #volumeContainer #slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #003049; /* Green background */
 }/*# sourceMappingURL=index.css.map */
