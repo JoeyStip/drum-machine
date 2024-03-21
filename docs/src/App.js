@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import HarmonicHit6 from "./harmonic-hit-6.wav";
 
-function Controls({displayText, handleSlide, onInput}){
+function Controls({displayText, onInput}){
 
   return (
     <div id="controls">
@@ -44,7 +44,6 @@ function App() {
     let keyPressed = e.key.toUpperCase()
     let keys = ["Q","W","E","A","S","D","Z","X","C"]
     if(keys.some((x)=>x === keyPressed)){
-      console.log(keyPressed)
       let audio = document.getElementById(keyPressed)
       let text = audio.parentElement.id
       setDisplayText(text)
@@ -73,7 +72,6 @@ function App() {
           <Pad sample="Kick" onClick={handleClick} padLabel="X" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" />
           <Pad sample="Closed-HH" onClick={handleClick} padLabel="C" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" />
         </div>
-        
         <Controls displayText={displayText} onInput={handleSlide}/>
       </div>
     </div>
