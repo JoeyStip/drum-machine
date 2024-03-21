@@ -49,8 +49,23 @@ code {
   background-color: #d62828;
 }
 
-#display {
+#controls {
   border: solid 1px black;
-  width: 50px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#controls #display {
+  width: 50%;
   height: 50px;
+  border: 5px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*position: relative;
+  top: 50%;
+  left: 30%*/
 }/*# sourceMappingURL=index.css.map */

@@ -2,11 +2,13 @@ import './App.css';
 import { useState } from 'react';
 import HarmonicHit6 from "./harmonic-hit-6.wav";
 
-function Display({displayText}){
+function Controls({displayText}){
 
   return (
-    <div id="display">
-      {displayText}
+    <div id="controls">
+      <div id="display">
+        {displayText}
+      </div>
     </div>
   )
 }
@@ -19,8 +21,8 @@ function Pad({sample, onClick, padLabel, src}) {
 
   return (
     <button className="drum-pad" id={sample} value={sample} onClick={onClick}>
-      {padLabel} {sample}
-      <audio src={src} id={sample + "audio"} className={padLabel} onClick={playSample}></audio>
+      {padLabel}
+      <audio src={src} id={padLabel} className="clip" onClick={playSample}></audio>
     </button>
   )
 }
@@ -31,21 +33,18 @@ function App() {
   const [displayText, setDisplayText] = useState('')
 
   function handleClick(e){
-    
-    const x = document.getElementById(e.target.id + "audio")
+    const x = e.target.children[0]
+    setDisplayText(e.target.id)
     x.play();
   }
 
   window.addEventListener("keydown", playKB, false)
 
   function playKB(e){
-    let audio = document.getElementsByClassName(e.key.toUpperCase())
-    //var test = document.getElementsByClassName("Q")
-    //let x = e.key
-    //console.log("HTML element first item: " + test[0], "event key: " + x.toUpperCase())
-    let text = audio[0].id
+    let audio = document.getElementById(e.key.toUpperCase())
+    let text = audio.id
     setDisplayText(text.substring(0, text.length-5))
-    audio[0].play();
+    audio.play();
   }
    
   return (
@@ -62,7 +61,7 @@ function App() {
           <Pad sample="Kick" onClick={handleClick} padLabel="X" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3" />
           <Pad sample="Closed-HH" onClick={handleClick} padLabel="C" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" />
         </div>
-        <Display displayText={displayText}/>
+        <Controls displayText={displayText}/>
       </div>
     </div>
   );
