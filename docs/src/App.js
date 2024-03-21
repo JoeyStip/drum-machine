@@ -36,17 +36,20 @@ function App() {
     const x = e.target.children[0]
     setDisplayText(e.target.id)
     x.play();
-    console.log(x.volume)
   }
 
   window.addEventListener("keydown", playKB, false)
 
   function playKB(e){
-    let audio = document.getElementById(e.key.toUpperCase())
-    let text = audio.parentElement.id
-    console.log(text)
-    setDisplayText(text)
-    audio.play();
+    let keyPressed = e.key.toUpperCase()
+    let keys = ["Q","W","E","A","S","D","Z","X","C"]
+    if(keys.some((x)=>x === keyPressed)){
+      console.log(keyPressed)
+      let audio = document.getElementById(keyPressed)
+      let text = audio.parentElement.id
+      setDisplayText(text)
+      audio.play();
+    }
   }
 
   function handleSlide(e){
