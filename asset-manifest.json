@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/drum-machine/static/css/main.1344f5bb.css",
+    "main.js": "/drum-machine/static/js/main.a386a91a.js",
+    "static/js/453.a32f8043.chunk.js": "/drum-machine/static/js/453.a32f8043.chunk.js",
+    "static/media/harmonic-hit-6.wav": "/drum-machine/static/media/harmonic-hit-6.61a16ff07e935fc05b63.wav",
+    "index.html": "/drum-machine/index.html",
+    "main.1344f5bb.css.map": "/drum-machine/static/css/main.1344f5bb.css.map",
+    "main.a386a91a.js.map": "/drum-machine/static/js/main.a386a91a.js.map",
+    "453.a32f8043.chunk.js.map": "/drum-machine/static/js/453.a32f8043.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1344f5bb.css",
+    "static/js/main.a386a91a.js"
+  ]
+}
