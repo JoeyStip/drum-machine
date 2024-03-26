@@ -28,8 +28,6 @@ function Pad({sample, onClick, padLabel, src}) {
 }
 
 function App() {
-  
-  //const [sample, setSample] = useState('') 
   const [displayText, setDisplayText] = useState('')
 
   function handleClick(e){
@@ -63,9 +61,9 @@ function App() {
       <div id="interface">
         <div id="buttonContainer">
           <Pad sample="Harmonic Hit 6" onClick={handleClick} padLabel="Q" src={HarmonicHit6} />
-          <Pad sample="heater 2" onClick={handleClick} padLabel="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" />
-          <Pad sample="heater 3" onClick={handleClick} padLabel="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" />
-          <Pad sample="heater 4" onClick={handleClick} padLabel="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" />
+          <Pad sample="Heater 2" onClick={handleClick} padLabel="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" />
+          <Pad sample="Heater 3" onClick={handleClick} padLabel="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" />
+          <Pad sample="Heater 4" onClick={handleClick} padLabel="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" />
           <Pad sample="Clap" onClick={handleClick} padLabel="S" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" />
           <Pad sample="Open-HH" onClick={handleClick} padLabel="D" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" />
           <Pad sample="Kick-n'-Hat" onClick={handleClick} padLabel="Z" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3" />
