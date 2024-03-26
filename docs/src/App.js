@@ -29,7 +29,7 @@ function Pad({sample, onClick, padLabel, src}) {
 
 function App() {
   
-  const [sample, setSample] = useState('') 
+  //const [sample, setSample] = useState('') 
   const [displayText, setDisplayText] = useState('')
 
   function handleClick(e){

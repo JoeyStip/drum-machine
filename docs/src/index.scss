@@ -2,7 +2,6 @@ $BG: #003049;
 $DrumMachine: #d62828;
 
 * {
-   /*border: solid 1px red;*/
    box-sizing: border-box;
 }
   
@@ -68,31 +67,27 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        /*position: relative;
-        top: 50%;
-        left: 30%*/
     }
     #volumeContainer{
         display:flex;
         flex-direction: column;
         #slider{
-            -webkit-appearance: none;  /* Override default CSS styles */
+            -webkit-appearance: none;
             appearance: none;
-            width: 100%; /* Full-width */
-            height: 25px; /* Specified height */
-            background: #d3d3d3; /* Grey background */
-            outline: none; /* Remove outline */
-            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            width: 100%; 
+            height: 25px; 
+            background: #d3d3d3; 
+            outline: none; 
+            opacity: 0.7; 
+            -webkit-transition: .2s;
             transition: opacity .2s;
         }
         #slider::-webkit-slider-thumb {
-            -webkit-appearance: none; /* Override default look */
+            -webkit-appearance: none;
             appearance: none;
-            width: 25px; /* Set a specific slider handle width */
-            height: 25px; /* Slider handle height */
-            background: $BG; /* Green background */
+            width: 25px; 
+            height: 25px;
+            background: $BG;
         }
-        
     }
 }
