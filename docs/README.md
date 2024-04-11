@@ -4,7 +4,7 @@ Drum-machine is a web app made using react. It was completed as part of the Fron
 
 ## Usage
 
-Try out the drum-machine by following this [link](https://joeystip.github.io/drum-machine/). Use your keyboard or you mouse to trigger samples.
+Try out the drum-machine by following this [link](https://joeystip.github.io/drum-machine/). Use your keyboard or your mouse to trigger samples.
 
 ## License
 
